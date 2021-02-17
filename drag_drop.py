@@ -4,7 +4,6 @@ import sys
 import os
 import shutil
 
-
 class MainWidget(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -62,7 +61,7 @@ class MainWidget(QMainWindow):
         self.copy_amount_text.setPlainText("1")
         self.copy_amount_text.textChanged.connect(lambda: self.onAmountChange(self.copy_amount_text))
 
-        self.replace_ending_file_name_number_button = QCheckBox("Replace Last Number?",self)
+        self.replace_ending_file_name_number_button = QCheckBox("Replace Last Number Of File?",self)
         self.replace_ending_file_name_number_button.move(self.starting_number_text.pos().x(),int(self.starting_number_text.pos().y()+label_buffer*1.5))
         self.replace_ending_file_name_number_button.resize(320,40)
         
